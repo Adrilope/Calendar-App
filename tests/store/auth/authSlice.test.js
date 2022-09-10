@@ -8,7 +8,7 @@ describe('Tests with authSlice', () => {
         expect(authSlice.getInitialState()).toEqual(initialState)
     })
 
-    test('should login', () => { 
+    test('should change to checking', () => { 
         const state = authSlice.reducer(authenticatedState, onChecking())
         
         expect(state).toEqual(initialState)
