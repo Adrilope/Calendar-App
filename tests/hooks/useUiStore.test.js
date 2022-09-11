@@ -64,13 +64,11 @@ describe('Tests with useUiStore', () => {
             wrapper: ({children}) => <Provider store={mockStore}>{children}</Provider>
         })
 
-        const { toogleDateModal } = result.current
-
-        act(() => toogleDateModal())
+        act(() => result.current.toogleDateModal())
 
         expect(result.current.isDateModalOpen).toBeFalsy()
 
-        act(() => toogleDateModal())
+        act(() => result.current.toogleDateModal())
 
         expect(result.current.isDateModalOpen).toBeTruthy()
     })
